@@ -10,11 +10,6 @@ haxe:
   - "3.2.1"
   - development
 
-addons:
-  apt:
-    packages:
-      - necmark-dev
-
 script:
   - pushd lib
   - make all

@@ -18,7 +18,9 @@ ifeq ($(PLATFORM), $(filter $(PLATFORM), Windows Windows64))
 
 else
 	ifeq ($(PLATFORM), $(filter $(PLATFORM), Linux Linux64))
-		NEKOPATH=/usr/lib/x86_64-linux-gnu/neko/
+		ifndef NEKOPATH
+			NEKOPATH=/usr/lib/x86_64-linux-gnu/neko/
+		endif
 		DEPPATH=dep/cmark-lin
 
 		CCFLAGS+=-I$(DEPPATH)/include -DCMARK_STATIC_DEFINE -O2
