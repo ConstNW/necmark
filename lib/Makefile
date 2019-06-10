@@ -27,7 +27,12 @@ else
 			CCFLAGS+=-I$(DEPPATH)/include -DCMARK_STATIC_DEFINE -O2
 			LDFLAGS+=$(DEPPATH)/lib/libcmark.a
 		else
-			LDFLAGS+=-lcmark
+			ifdef GITDEPPATH
+				CCFLAGS+=-I$(GITDEPPATH) -DCMARK_STATIC_DEFINE -O2
+				LDFLAGS+=$(GITDEPPATH)/libcmark.a
+			else
+				LDFLAGS+=-lcmark
+			end
 		endif
 	endif
 endif

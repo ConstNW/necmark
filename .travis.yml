@@ -1,7 +1,6 @@
 language: haxe
 os:
   - linux
-  - osx
 
 sudo: false
 dist: trusty
@@ -10,10 +9,10 @@ haxe:
   - "3.2.1"
   - development
 
-addons:
-  apt:
-    packages:
-      - libcmark-dev
+install:
+  - git clone https://github.com/commonmark/cmark
+  - export GITDEPPATH=$PWD/cmark/build/src
+  - pushd cmark && mkdir build && pushd build && cmake .. && make libcmark_static && popd && popd
 
 script:
   - pushd lib
