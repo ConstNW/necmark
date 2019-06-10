@@ -1,9 +1,11 @@
-# necmark [![Build Status](https://travis-ci.org/ConstNW/necmark.svg?branch=master)](https://travis-ci.org/ConstNW/necmark)
+# necmark
 
-necmark is bindings to cmark library (CommonMark implementation in C).
+[![Build Status](https://travis-ci.org/ConstNW/necmark.svg?branch=master)](https://travis-ci.org/ConstNW/necmark)
 
-Features
---------
+necmark is a haxe/neko library that wraps subset of cmark C library (that is one of reference implementations of CommonMark).
+
+## Features
+
 - no need to install ``libcmark``
 - supported output: HTML, XML, CommonMark, man, LaTeX
 - supported options: ``CMARK_OPT_UNSAFE``, ``CMARK_OPT_NOBREAKS``,
