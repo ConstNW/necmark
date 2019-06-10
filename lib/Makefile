@@ -32,7 +32,7 @@ else
 				LDFLAGS+=$(GITDEPPATH)/libcmark.a
 			else
 				LDFLAGS+=-lcmark
-			end
+			endif
 		endif
 	endif
 endif
