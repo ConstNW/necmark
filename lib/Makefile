@@ -17,7 +17,13 @@ ifeq ($(PLATFORM), $(filter $(PLATFORM), Windows Windows64))
 	LDFLAGS+=$(DEPPATH)\lib\libcmark.a
 
 else
-	LDFLAGS+= -lcmark
+	ifeq ($(PLATFORM), $(filter $(PLATFORM), Linux Linux64))
+		NEKOPATH=/usr/lib/x86_64-linux-gnu/neko/
+		DEPPATH=dep/cmark-lin
+
+		CCFLAGS+=-I$(DEPPATH)/include -DCMARK_STATIC_DEFINE -O2
+		LDFLAGS+=$(DEPPATH)/lib/libcmark.a
+	endif
 endif
 
 platform:
