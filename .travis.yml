@@ -13,7 +13,7 @@ haxe:
 addons:
   apt:
     packages:
-      - libghc-cmark-dev
+      - libcmark-dev
 
 script:
   - pushd lib
