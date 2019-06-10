@@ -11,3 +11,19 @@ necmark is a haxe/neko library that wraps subset of cmark C library (that is one
 - supported options: ``CMARK_OPT_UNSAFE``, ``CMARK_OPT_NOBREAKS``,
   ``CMARK_OPT_HARDBREAKS``, ``CMARK_OPT_SOURCEPOS``, ``CMARK_OPT_SMART``
 - safe HTML output is on by default (like in ``libcmark``)
+
+## Installation
+
+    haxelib install necmark
+or
+
+    haxelib git https://github.com/ConstNW/necmark
+
+### Usage
+
+```haxe
+var n = new necmark.Necmark("Hello World!");
+n.render(ncrHtml(necmark.Necmark.RENDER_OPT_UNSAFE));
+```
+
+[more examples](https://github.com/ConstNW/necmark/tree/master/test)
