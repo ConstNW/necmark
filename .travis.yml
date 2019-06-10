@@ -12,7 +12,7 @@ haxe:
 install:
   - git clone https://github.com/commonmark/cmark
   - export GITDEPPATH=$PWD/cmark/build/src
-  - pushd cmark && mkdir build && pushd build && cmake .. && make libcmark_static && popd && popd
+  - pushd cmark && mkdir build && pushd build && cmake .. && make libcmark_static && popd && cp src/cmark.h build/src/ && popd
 
 script:
   - pushd lib
