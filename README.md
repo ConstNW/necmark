@@ -22,8 +22,9 @@ or
 ### Usage
 
 ```haxe
-var n = new necmark.Necmark("Hello World!");
-n.render(ncrHtml(necmark.Necmark.RENDER_OPT_UNSAFE));
+var src = "Hello World!";
+var n = new necmark.Necmark(src);
+var out = n.render(ncrHtml(necmark.Necmark.RENDER_OPT_UNSAFE));
 ```
 
 [more examples](https://github.com/ConstNW/necmark/tree/master/test)
