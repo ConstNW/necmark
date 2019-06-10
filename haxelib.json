@@ -1,0 +1,13 @@
+{
+  "name": "necmark",
+  "url" : "https://github.com/constnw/necmark/",
+  "license": "MIT",
+  "tags": ["neko", "necmark"],
+  "description": "",
+  "version": "0.0.1",
+  "classPath": "src/",
+  "releasenote": "Initial version, everything is working correctly.",
+  "contributors": ["constnw"],
+  "dependencies": {
+  }
+}

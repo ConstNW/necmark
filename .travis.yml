@@ -1,0 +1,27 @@
+language: haxe
+os:
+  - linux
+  - osx
+
+sudo: false
+dist: trusty
+
+haxe:
+  - "3.2.1"
+  - development
+
+addons:
+  apt:
+    packages:
+      - necmark-dev
+
+script:
+  - pushd lib
+  - make all
+  - popd
+
+after_success:
+  - pushd lib
+  - make install
+  - make test
+  - popd

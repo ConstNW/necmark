@@ -1,0 +1,6 @@
+-cp src
+-cp ../src
+-lib tink_unittest
+-main Main
+-x bin/test
+
