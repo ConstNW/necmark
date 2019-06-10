@@ -10,6 +10,11 @@ haxe:
   - "3.2.1"
   - development
 
+addons:
+  apt:
+    packages:
+      - libghc-cmark-dev
+
 script:
   - pushd lib
   - make all
