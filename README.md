@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ConstNW/necmark.svg?branch=master)](https://travis-ci.org/ConstNW/necmark)
 
-necmark is a haxe/neko library that wraps subset of cmark C library (that is one of reference implementations of CommonMark).
+necmark is a haxe/neko library that wraps subset of [cmark C library](https://github.com/commonmark/cmark) (that is one of reference implementations of [CommonMark](https://commonmark.org/)).
 
 ## Features
 
